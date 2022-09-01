@@ -1,4 +1,4 @@
-import wrapperJson from '../../artifacts/contracts/WrappedRebaseToken.sol/WrappedRebaseToken.json';
+import wrapperJson from './WrappedRebaseToken.json';
 import { erc20ABI } from 'wagmi';
 import { priceOracleAbi } from './priceOracleAbi';
 
