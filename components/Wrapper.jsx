@@ -5,7 +5,7 @@ import aaltoLogo from '../public/img/aalto-icon.svg';
 import { useAccount, useContractRead, useContractWrite, useNetwork, usePrepareContractWrite } from "wagmi";
 import { WRAPPER, AALTO, PRICE_ORACLE, defaultChainId } from "../constants";
 import { BigNumber, utils, constants } from 'ethers';
-import { ExternalLink } from "react-feather";
+import { ExternalLink, ArrowUpRight } from "react-feather";
 import NotificationContext from "../context/NotificationContext";
 import CountUp from 'react-countup';
 
@@ -430,14 +430,27 @@ export const Wrapper = () => {
           </div>
 
           <div className="grid grid-flow-row mt-4">
-            <div className="uppercase text-xs text-brand-gray tracking-widest">Aalto Amount</div>
+            <div className="text-xs text-brand-gray tracking-widest">
+            {mode === "wrap" ? "AALTO AMOUNT" : "wAALTO AMOUNT"}
+            </div>
             <div className="relative rounded-sm shadow-sm">
               <div className="absolute inset-y-0 ml-2 flex items-center">
-                <Image
-                  src={aaltoLogo}
-                  height={20}
-                  width={20}
-                />
+                {
+                  mode === "wrap" ? 
+                  <Image
+                    src={aaltoLogo}
+                    height={20}
+                    width={20}
+                  />
+                : <img
+                    src="https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+                    alt=""
+                    width={22}
+                    height={22}
+                    style={{ marginRight: "6px" }}
+                  />
+                }
+               
               </div>
               <input 
                 type="text" 
@@ -479,13 +492,33 @@ export const Wrapper = () => {
                   <span className="capitalize">{ mode }</span>
                 </button>
             }
-            {/* {
-              (unwrapError || wrapError) && hasSufficientAllowance ?
-              <div className="text-xs text-brand-gray flex justify-end mt-1">
-                {formatError(wrapError?.toString())}
-              </div>
-              : ''
-            } */}
+    
+            </div>
+            <div className="mb-6">
+              <button
+                className={`btn btn-block btn-sm btn-primary mt-2 rounded-sm`}
+                onClick={() => {
+                  window.open(
+                    "https://aequinox.exchange/#/pool/0xe53896c872b39fa3254262d18157447504b211de00020000000000000000000d",
+                    "__blank",
+                  );
+                }}
+              >
+              <img
+                src="https://github.com/0xBriz/token-list/blob/main/images/aeq_token.png?raw=true"
+                alt="AEQ Token"
+                height={20}
+                width={20}
+                style={{
+                  marginRight: "5px",
+                }}
+              />{" "}
+              <span style={{
+                    marginRight: "5px",
+                  }}>
+              Go to wAALTO-BUSD pool
+             </span> <ExternalLink size={20}/>
+              </button>
             </div>
             <div className="flex justify-between mb-1">
               <div className="text-brand-gray">You will receive</div>

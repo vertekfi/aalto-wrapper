@@ -69,6 +69,7 @@ export default function Layout({children}) {
                           </ul>
                         </div>
                       </div>
+                 
                       <div className="flex grow justify-end">
                         <Connect />
                       </div>
@@ -88,7 +89,7 @@ export default function Layout({children}) {
               <div className="drawer-side">
                 <label htmlFor="nav-drawer" className="drawer-overlay"></label> 
                 <ul className="menu p-4 overflow-y-auto w-80 bg-brand-dark-blue">
-                  <li className="menu-item">
+                  {/* <li className="menu-item">
                     Dashboard
                   </li>
                   <li className="menu-item">
@@ -108,7 +109,7 @@ export default function Layout({children}) {
                   </li>
                   <li className="menu-item">
                     Buy
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
