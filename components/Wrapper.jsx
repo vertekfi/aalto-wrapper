@@ -353,11 +353,11 @@ export const Wrapper = () => {
   }, [ratioIsFetched, ratioUpdated]);
 
   const userAaltoBalanceUsd = useMemo(() => {
-    return Number(utils.formatEther(aaltoBalance || '0')) / Number(utils.formatEther(aaltoPrice || '0'));
+    return Number(utils.formatEther(aaltoBalance || '0')) * Number(utils.formatEther(aaltoPrice || '0'));
   }, [aaltoBalance, aaltoPrice]);
 
   const userWrappedAaltoBalanceUsd = useMemo(() => {
-    return Number(utils.formatEther(unwrappedBalance || '0')) / Number(utils.formatEther(aaltoPrice || '0'));
+    return Number(utils.formatEther(wrappedAaltoBalance || '0')) / Number(utils.formatEther(aaltoPrice || '0'));
   }, [unwrappedBalance, aaltoPrice]);
 
   useEffect(() => {
