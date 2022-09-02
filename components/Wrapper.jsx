@@ -529,8 +529,8 @@ export const Wrapper = () => {
               <div>
                 {
                   mode === 'wrap'
-                  ? <CountUp end={utils.formatEther(unwrappedQuantity?.toString() || '0')} decimals={2} separator="," suffix="&nbsp;wAALTO" />
-                  : <CountUp end={utils.formatEther(wrappedQuantity?.toString() || '0')} decimals={2} separator="," suffix="&nbsp;Aalto" />    
+                  ? <CountUp end={utils.formatEther(wrappedQuantity?.toString() || '0')} decimals={2} separator="," suffix="&nbsp;wAALTO" />
+                  : <CountUp end={utils.formatEther(unwrappedQuantity?.toString() || '0')} decimals={2} separator="," suffix="&nbsp;Aalto" />    
                 }
               </div>
             </div>
