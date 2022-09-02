@@ -75,6 +75,7 @@ export default function Connect() {
                   src={walletIcon}
                   height={16}
                   width={16}
+                  alt=""
                 />
                 <span className="mx-2">{ensName ?? shortenAddress(address)}</span>
               </label>
@@ -99,6 +100,7 @@ export default function Connect() {
             src={walletIcon}
             height={16}
             width={16}
+            alt=""
           />
           <span className="ml-2">Connect</span>
         </label>
