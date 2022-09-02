@@ -93,7 +93,7 @@ export const WRAPPER = {
     abi: wrapperJson.abi
   },
   56: {
-    address: '0xcEC22890127615F2c1eeEb684c77cb3718a35C58',
+    address: '0x12b70d84DAb272Dc5A24F49bDbF6A4C4605f15da',
     abi: wrapperJson.abi,
   }
 }
