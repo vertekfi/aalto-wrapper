@@ -45,7 +45,7 @@ export default function Layout({children}) {
                       <div className="flex grow justify-center">
                         <div className="flex-none hidden lg:block">
                           <ul className="menu menu-horizontal flex items-center">
-                            <li className="menu-item">
+                            {/* <li className="menu-item">
                               Dashboard
                             </li>
                             <li className="menu-item">
@@ -65,7 +65,7 @@ export default function Layout({children}) {
                             </li>
                             <li className="menu-item">
                               Buy
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>
