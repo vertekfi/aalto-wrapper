@@ -29,6 +29,8 @@ export const Wrapper = () => {
   const [aaltoPrice, setAaltoPrice] = useState('0');
   const [ratio, setRatio] = useState('0');
 
+
+
   const formatError = (error) => {
     if (error.toString().match(/'(.*?)'/)?.length) {
       return error.toString().match(/'(.*?)'/)[0].replaceAll('\'','');
@@ -81,6 +83,8 @@ export const Wrapper = () => {
     functionName: 'getUnwrappedQuantity',
     args: [inputAmountWei],
   });
+
+
 
   const { 
     data: unwrappedBalanceQuantityData, 
@@ -264,7 +268,7 @@ export const Wrapper = () => {
   const { config: unwrapConfig, error: unwrapError } = usePrepareContractWrite({
     addressOrName: WRAPPER[chain?.id]?.address,
     contractInterface: WRAPPER[chain?.id]?.abi,
-    functionName: 'wrap',
+    functionName: 'unwrap',
     args: [inputAmountWei]
   });
 
