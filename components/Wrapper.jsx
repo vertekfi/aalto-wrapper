@@ -28,6 +28,7 @@ export const Wrapper = () => {
   const [unwrappedBalance, setUnwrappedBalance] = useState('0');
   const [aaltoPrice, setAaltoPrice] = useState('0');
   const [ratio, setRatio] = useState('0');
+  const [reverseRatio, setReverseRatio] = useState('0');
 
 
 
@@ -316,6 +317,10 @@ export const Wrapper = () => {
     }
   });
 
+  console.log(utils.formatEther(ratioData || '0'))
+  
+  console.log(ratio)
+
   useEffect(() => {
     setAllowance(allowanceData);
   }, [allowanceIsFetched, allowanceUpdated]);
@@ -353,6 +358,7 @@ export const Wrapper = () => {
     if (!ratioData || ratioData?.toString() === '0') {
       setRatio('Loading...');
     }
+    setReverseRatio(utils.formatEther(ratioData?.toString() || utils.parseEther('1')))
     setRatio(1 / Number(utils.formatEther(ratioData?.toString() || utils.parseEther('1'))));
   }, [ratioIsFetched, ratioUpdated]);
 
@@ -542,7 +548,7 @@ export const Wrapper = () => {
             </div>
             <div className="flex justify-between">
               <div className="text-brand-gray">Ratio</div>
-              <div>1 AALTO = {ratio || '0'} wAalto</div>
+              <div>1 wAALTO = {reverseRatio || '0'} AALTO</div>
             </div>
           </div>
         </Card>
