@@ -480,21 +480,27 @@ export const Wrapper = () => {
                   Enable
                 </a>
               :
-                <button
-                  className={`btn btn-block btn-sm btn-primary mt-2 rounded-sm ${
-                    mode === 'wrap' && (wrapIsLoading || wrapInProgress) 
-                    ? 'loading'
-                    : mode === 'unwrap' && (unwrapIsLoading || unwrapInProgress)
-                      ? 'loading'
-                      : ''
-                  }`}
-                  onClick={() => {
-                    mode === 'wrap' ? wrap?.() : unwrap?.();
-                  }}
-                  disabled={ (mode === 'wrap' && wrapError) || (mode === 'unwrap' && unwrapError) }
-                >
-                  <span className="capitalize">{ mode }</span>
-                </button>
+                // <button
+                //   className={`btn btn-block btn-sm btn-primary mt-2 rounded-sm ${
+                //     mode === 'wrap' && (wrapIsLoading || wrapInProgress) 
+                //     ? 'loading'
+                //     : mode === 'unwrap' && (unwrapIsLoading || unwrapInProgress)
+                //       ? 'loading'
+                //       : ''
+                //   }`}
+                //   onClick={() => {
+                //     mode === 'wrap' ? wrap?.() : unwrap?.();
+                //   }}
+                //   disabled={ (mode === 'wrap' && wrapError) || (mode === 'unwrap' && unwrapError) }
+                // >
+                //   <span className="capitalize">{ mode }</span>
+                // </button>
+                 <button
+                 className={`btn btn-block btn-sm btn-primary mt-2 rounded-sm`}
+                 disabled={ (mode === 'wrap' && wrapError) || (mode === 'unwrap' && unwrapError) }
+               >
+                 <span className="capitalize">{ mode }</span>
+               </button>
             }
     
             </div>
