@@ -7,7 +7,7 @@ export const Faq = () => {
         <h2 className="text-2xl text-white">FAQ</h2>
         <Card title="Why wrap AALTO?" footer="A-Team Index Link">
           <p>
-          The wrapped version of Aalto allows it to be a lot more compatible with various systems than a vanilla rebase token. wAALTO tracks the amount of Aalto within itself including rebases, and adjusts it's exchange rate accordingly. The longer Aalto rebases within it, the more Aalto each wAalto gives when unwrapped
+          The wrapped version of Aalto allows it to be a lot more compatible with various systems than a vanilla rebase token. wAALTO tracks the amount of Aalto within itself including rebases, and adjusts it&lsquo;s exchange rate accordingly. The longer Aalto rebases within it, the more Aalto each wAalto gives when unwrapped
           </p>
           <div className="text-brand-gray underline mt-4">
             <a 
