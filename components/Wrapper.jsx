@@ -542,7 +542,7 @@ export const Wrapper = () => {
             </div>
             <div className="flex justify-between">
               <div className="text-brand-gray">Ratio</div>
-              <div>1 wAALTO = {ratio || '0'} Aalto</div>
+              <div>1 AALTO = {ratio || '0'} wAalto</div>
             </div>
           </div>
         </Card>
